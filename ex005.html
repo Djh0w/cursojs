@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First DOM</title>
+    <style>
+        body {
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Initiate DOM Studies</h1>
+    <p>Result here</p>
+    <p>Learning <strong>DOM</strong> in JS.</p>
+    <div div="msg">Click here</div>
+    <script>
+        /*
+        Arvore DOM:
+        Hierarquia de elementos
+        window:
+        document:
+        html:
+        head body:
+        h1 p p div
+
+        body e child de html
+        html e parent de body
+        html e child de document
+        Document e parent de html
+
+        Por isso: window.document.write()
+
+        Quando elemento metodo e no plural usar [] indicando posicao:
+        Tenho dois paragrafos então:
+        var p1 = window.document.getElementsByTagName('p')[0]
+
+        */
+       /*Selecionado por Marca*/
+        var corpo = document.body
+        var p1 = document.getElementsByTagName('p')[1]
+        
+        document.write(p1.innerHTML)
+
+        /*Selecionado por ID*/
+        /*var d = document.getElementById('msg')
+        d.innerText = 'I m waiting'*/
+
+        /*Selecionando por Name*/
+        //var d = document.getElementsByName('msg')[0]
+    
+        /*Selecionando por Classe*/
+        //var d = document.getElementsByClassName('msg')
+       
+        /*Selecionando por Seletor*/
+        var d = document.querySelector('div#msg')
+        d.style.background = 'blue'
+    </script>
+</body>
+</html>
