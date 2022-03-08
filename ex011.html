@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sua Nacionalidade</h1>
+    Onde você mora? <input type="text" name="nacionalidade" id="pais">
+    <input type="button" value="OK" onclick="nacionalidade()">
+    <div id="res">
+
+    </div>
+    <script>
+        function nacionalidade () {
+        var nac = document.querySelector('input#pais') // document.getElementById('nac')
+        var res = document.querySelector('div#res') // document.getElementById('res')
+        var pais = String(nac.value)
+        
+        res.innerHTML = `<p>Você mora no <strong>${pais.toUpperCase()}</strong></p>.`
+
+        if(pais.toUpperCase() != 'BRASIL'){
+            res.innerHTML += 'Você é Estrangeiro!' 
+        } else {
+            res.innerHTML += `Vocé é Brasileiro!`
+        }
+        }    
+    </script>
+</body>
+</html>
